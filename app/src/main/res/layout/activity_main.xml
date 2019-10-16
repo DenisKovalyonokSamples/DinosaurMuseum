@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/fragment_ar_engine" />
+    <!-- Floating Action button remove models -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabClearScene"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="clearObjectsFromScene"
+        app:backgroundTint="@color/transparentColor"
+        app:borderWidth="0dp"
+        app:elevation="0dp"
+        app:fabSize="normal"
+        app:maxImageSize="36dp"
+        app:srcCompat="@drawable/ic_close_circle"
+        app:tint="@android:color/white" />
+
+    <!-- Floating Action buttons -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toggleFabMode"
+        app:borderWidth="0dp"
+        app:elevation="0dp"
+        app:backgroundTint="@color/transparentColor"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appBar"
+        app:maxImageSize="64dp"
+        app:srcCompat="@mipmap/fab_models_48dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabExitFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:visibility="invisible"
+        android:onClick="exitFullScreen"
+        app:backgroundTint="@color/transparentColor"
+        app:borderWidth="0dp"
+        app:elevation="0dp"
+        app:fabSize="normal"
+        app:maxImageSize="36dp"
+        app:srcCompat="@mipmap/fab_full_screen_exit_24dp" />
+
+    <!-- Bottom bar -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/appBar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        app:fabCradleVerticalOffset="5dp"
+        app:hideOnScroll="true"
+        app:navigationIcon="@drawable/ic_menu_white_24dp" >
+        <RelativeLayout
+            android:id="@+id/panelMediaButtons"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:onClick="createVideo"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:backgroundTint="@color/transparentColor"
+                app:fabSize="normal"
+                app:maxImageSize="36dp"
+                app:tint="@android:color/white"
+                app:srcCompat="@mipmap/fab_start_video_24dp" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="createPhoto"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:backgroundTint="@color/transparentColor"
+                app:fabSize="normal"
+                app:maxImageSize="36dp"
+                app:tint="@android:color/white"
+                app:srcCompat="@mipmap/fab_photo_24dp" />
+        </RelativeLayout>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <ProgressBar
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:indeterminateTint="@color/colorAccent"
+        android:indeterminateTintMode="src_atop"
+        app:layout_anchorGravity="center|center_vertical"
+        android:visibility="gone"
+        app:layout_anchor="@id/fabMain" />
+    <ProgressBar
+        android:id="@+id/spinnerFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/colorAccent"
+        android:indeterminateTintMode="src_atop"
+        app:layout_anchorGravity="center|center_vertical"
+        android:visibility="gone"
+        app:layout_anchor="@id/fabExitFullScreen" />
+
+    <RelativeLayout
+        android:id="@+id/layoutSearchPanel"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:visibility="gone"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/imageFilter"
+            android:layout_width="@dimen/fab_panel_icon_size"
+            android:layout_height="@dimen/fab_panel_icon_size"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:tint="@android:color/white"
+            android:src="@drawable/ic_filter_list"
+            android:scaleType="centerCrop"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchExpressionInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/edit_text_box_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColorHint="@android:color/white"
+            android:layout_toStartOf="@+id/imageSearch"
+            android:layout_toEndOf="@+id/imageFilter">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchExpressionInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@android:color/white"
+                android:drawableRight="@drawable/ic_close_circle"
+                android:drawableTint="@android:color/white"
+                android:hint="Search"
+                android:padding="0dp"
+                android:textColor="@android:color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/imageSearch"
+            android:layout_width="@dimen/fab_panel_icon_size"
+            android:layout_height="@dimen/fab_panel_icon_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_search"
+            android:tint="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="100dp">
+        <GridView
+            android:id="@+id/gridViewModels"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:columnWidth="192dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="2"
+            android:padding="4dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="4dp"
+            android:visibility="gone" />
+        <GridView
+            android:id="@+id/gridViewScenes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:columnWidth="192dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="1"
+            android:padding="4dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="4dp"
+            android:visibility="gone" />
+        <GridView
+            android:id="@+id/gridViewMarket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:columnWidth="192dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="1"
+            android:padding="4dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="4dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

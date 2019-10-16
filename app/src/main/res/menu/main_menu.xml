@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_fullscreen"
+        app:showAsAction="always"
+        app:iconTint="@android:color/white"
+        android:icon="@drawable/ic_fullscreen"
+        android:title="@string/full_screen" />
+    <item
+        android:id="@+id/action_models"
+        app:showAsAction="always"
+        app:iconTint="@android:color/white"
+        android:icon="@mipmap/fab_models_48dp"
+        android:title="@string/models" />
+    <item
+        android:id="@+id/action_scenes"
+        app:showAsAction="always"
+        app:iconTint="@android:color/white"
+        android:icon="@mipmap/ic_scenes_48dp"
+        android:title="@string/scenes" />
+    <item
+        android:id="@+id/action_market"
+        app:showAsAction="always"
+        app:iconTint="@android:color/white"
+        android:icon="@mipmap/ic_masks_48dp"
+        android:title="@string/market" />
+</menu>

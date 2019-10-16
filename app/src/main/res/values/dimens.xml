@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="grid_panel_icon_size">22dp</dimen>
+    <dimen name="fab_panel_icon_size">24dp</dimen>
+</resources>

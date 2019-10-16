@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Dinosaur Museum</string>
-
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="full_screen">Full screen</string>
+    <string name="models">Dinosaurs</string>
+    <string name="scenes">Skeletons</string>
+    <string name="market">Fossils</string>
 </resources>
