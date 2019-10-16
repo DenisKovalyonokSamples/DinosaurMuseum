@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="186dp"
             android:paddingTop="20dp"
-            android:src="@drawable/m_egypt"
+            android:src="@drawable/s_triceratops"
             android:background="@drawable/shape_round_corners_top"
             android:scaleType="fitCenter"/>
             <RelativeLayout

@@ -12,7 +12,7 @@ import com.dk.dinosaurmuseum.R;
 public class SkeletonsGridViewAdapter  extends BaseAdapter {
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
 
     @Override
@@ -41,32 +41,27 @@ public class SkeletonsGridViewAdapter  extends BaseAdapter {
         TextView textName = (TextView) view.findViewById(R.id.textName);
 
         if (i == 0) {
-            image.setImageResource(R.drawable.m_egypt_masks);
+            image.setImageResource(R.drawable.s_triceratops);
 
-            textName.setText("Egypt Masks");
+            textName.setText("Triceratops Skull");
         }
         if (i == 1) {
-            image.setImageResource(R.drawable.m_stone_coffins);
+            image.setImageResource(R.drawable.s_gomphothere);
             imageFavorite.setImageResource(R.drawable.ic_favorite_filled);
 
-            textName.setText("Stone Sarcophagi");
+            textName.setText("Gomphothere Skull");
         }
         if (i == 2) {
-            image.setImageResource(R.drawable.m_bourgeois_de_calais);
+            image.setImageResource(R.drawable.s_diplodocus);
 
-            textName.setText("Bourgeois de Calais");
+            textName.setText("Diplodocus");
         }
         if (i == 3) {
-            image.setImageResource(R.drawable.m_rome_bustes);
+            image.setImageResource(R.drawable.s_utahraptor);
             imageFavorite.setImageResource(R.drawable.ic_favorite_filled);
             imageStatus.setImageResource(R.mipmap.fab_market_48dp);
 
-            textName.setText("Roman Busts");
-        }
-        if (i == 4) {
-            image.setImageResource(R.drawable.m_meretites_coffins);
-
-            textName.setText("Meret-it-es Coffins");
+            textName.setText("Utahraptor");
         }
 
         return view;

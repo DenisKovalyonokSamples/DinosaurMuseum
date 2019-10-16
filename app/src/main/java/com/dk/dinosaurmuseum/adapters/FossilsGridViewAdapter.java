@@ -12,7 +12,7 @@ import com.dk.dinosaurmuseum.R;
 public class FossilsGridViewAdapter  extends BaseAdapter {
     @Override
     public int getCount() {
-        return 7;
+        return 4;
     }
 
     @Override
@@ -40,43 +40,26 @@ public class FossilsGridViewAdapter  extends BaseAdapter {
         TextView textName = (TextView) view.findViewById(R.id.textName);
 
         if (i == 0) {
-            image.setImageResource(R.drawable.m_egypt);
+            image.setImageResource(R.drawable.f_shark);
 
-            textName.setText("Egypt Coffins");
+            textName.setText("Shark");
         }
         if (i == 1) {
-            image.setImageResource(R.drawable.m_christians);
+            image.setImageResource(R.drawable.f_stegosaurus);
 
-            textName.setText("Catholic Church");
+            textName.setText("Stegosaurus");
             imageStatus.setImageResource(R.mipmap.fab_market_48dp);
         }
         if (i == 2) {
-            image.setImageResource(R.drawable.m_greece);
+            image.setImageResource(R.drawable.f_coelophysis_2);
 
-            textName.setText("Ancient Greece");
+            textName.setText("Coelophysis");
             imageStatus.setImageResource(R.mipmap.fab_market_48dp);
         }
         if (i == 3) {
-            image.setImageResource(R.drawable.m_buddas);
+            image.setImageResource(R.drawable.f_coelophysis);
 
-            textName.setText("Buddhism");
-        }
-        if (i == 4) {
-            image.setImageResource(R.drawable.m_rome);
-
-            textName.setText("The Roman Empire");
-            imageStatus.setImageResource(R.mipmap.fab_market_48dp);
-        }
-        if (i == 5) {
-            image.setImageResource(R.drawable.m_india_bundle);
-
-            textName.setText("India");
-        }
-        if (i == 6) {
-            image.setImageResource(R.drawable.m_knight_bundle);
-
-            textName.setText("King Erik XIV");
-            imageStatus.setImageResource(R.drawable.ic_cart_plus_24dp);
+            textName.setText("Coelophysis");
         }
 
         return view;

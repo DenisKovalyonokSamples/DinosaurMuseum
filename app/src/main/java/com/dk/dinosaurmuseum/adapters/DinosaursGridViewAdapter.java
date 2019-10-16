@@ -12,7 +12,7 @@ import com.dk.dinosaurmuseum.R;
 public class DinosaursGridViewAdapter  extends BaseAdapter {
     @Override
     public int getCount() {
-        return 7;
+        return 8;
     }
 
     @Override
@@ -35,47 +35,53 @@ public class DinosaursGridViewAdapter  extends BaseAdapter {
 
         ImageView image = view.findViewById(R.id.image);
         ImageView imageDownload = view.findViewById(R.id.imageDownload);
-
         ImageView imageStatus = view.findViewById(R.id.imageStatus);
         TextView textName = view.findViewById(R.id.textName);
 
         if (i == 0) {
-            image.setImageResource(R.drawable.m_egypt);
+            image.setImageResource(R.drawable.d_allosaurus);
 
-            textName.setText("Egypt Coffins");
+            textName.setText("Allosaurus");
         }
         if (i == 1) {
-            image.setImageResource(R.drawable.m_christians);
+            image.setImageResource(R.drawable.d_carnotaurus);
 
-            textName.setText("Catholic Church");
+            textName.setText("Carnotaurus");
             imageStatus.setImageResource(R.mipmap.fab_market_48dp);
         }
         if (i == 2) {
-            image.setImageResource(R.drawable.m_greece);
+            image.setImageResource(R.drawable.d_diabloceratops);
 
-            textName.setText("Ancient Greece");
+            textName.setText("Diabloceratops");
             imageStatus.setImageResource(R.mipmap.fab_market_48dp);
         }
         if (i == 3) {
-            image.setImageResource(R.drawable.m_buddas);
+            image.setImageResource(R.drawable.d_diplodocus);
 
-            textName.setText("Buddhism");
+            textName.setText("Diplodocus");
         }
         if (i == 4) {
-            image.setImageResource(R.drawable.m_rome);
+            image.setImageResource(R.drawable.d_spinosaurus);
 
-            textName.setText("The Roman Empire");
+            textName.setText("Spinosaurus");
             imageStatus.setImageResource(R.mipmap.fab_market_48dp);
         }
         if (i == 5) {
-            image.setImageResource(R.drawable.m_india_bundle);
+            image.setImageResource(R.drawable.d_gorgosaurus);
 
-            textName.setText("India");
+            textName.setText("Gorgosaurus");
         }
         if (i == 6) {
-            image.setImageResource(R.drawable.m_knight_bundle);
+            image.setImageResource(R.drawable.d_ceratosaurus);
 
-            textName.setText("King Erik XIV");
+            textName.setText("Ceratosaurus");
+            imageStatus.setImageResource(R.drawable.ic_cart_plus_24dp);
+        }
+
+        if (i == 7) {
+            image.setImageResource(R.drawable.d_cryolophosaurus);
+
+            textName.setText("Cryolophosaurus");
             imageStatus.setImageResource(R.drawable.ic_cart_plus_24dp);
         }
 

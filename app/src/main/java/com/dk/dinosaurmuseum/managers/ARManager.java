@@ -161,6 +161,7 @@ public class ARManager {
                             thirdAnchorNode = new AnchorNode(anchor);
                         }
                     }
+                    currentSceneObject++;
                     /*if (currentSceneObject == 4) {
                         if (fourAnchorNode == null) {
                             _modelLoader.loadModel(four_RENDERABLE, R.raw.barque_of_mersou);
