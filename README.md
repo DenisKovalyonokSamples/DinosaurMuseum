@@ -1,2 +1,2 @@
 # DinosaurMuseum
-AR Core mobile application (Android). Under development now. 
+Android Native AR Core mobile application (JAVA). Project is under development now. 
