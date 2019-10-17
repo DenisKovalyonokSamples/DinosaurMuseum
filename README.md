@@ -1,5 +1,5 @@
 # DinosaurMuseum
-Android Native (JAVA) AR Core mobile application.  
+Android Native (JAVA) AR Core mobile application. Dinosaur Museum brings 3D Models of dinosaurs, skeletons and fossils to your real environment. Application uses Google AR Core for manipulating with 3D content. (Database is under development, code will be updated soon).
 
 
 MAIN ACTIVITY (AR FRAGMENT)
