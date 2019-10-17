@@ -40,9 +40,9 @@ public class FossilsGridViewAdapter  extends BaseAdapter {
         TextView textName = (TextView) view.findViewById(R.id.textName);
 
         if (i == 0) {
-            image.setImageResource(R.drawable.f_shark);
+            image.setImageResource(R.drawable.s_diplodocus);
 
-            textName.setText("Shark");
+            textName.setText("Diplodocus");
         }
         if (i == 1) {
             image.setImageResource(R.drawable.f_stegosaurus);

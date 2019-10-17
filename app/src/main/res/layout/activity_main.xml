@@ -157,7 +157,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/searchExpressionInputEditText"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
+                android:layout_height="32dp"
                 android:background="@android:color/white"
                 android:drawableRight="@drawable/ic_close_circle"
                 android:drawableTint="@android:color/white"

@@ -38,15 +38,14 @@ public class ARManager {
     private TransformableNode fiveNode;
     private TransformableNode sixNode;
     private TransformableNode sevenNode;
-    private TransformableNode eightNode;
-    private TransformableNode nineNode;
-    private TransformableNode tenNode;
     private TransformableNode elevenNode;
     private TransformableNode twelveNode;
     private TransformableNode thirteenNode;
     private TransformableNode fourteenNode;
-    private TransformableNode fifteenNode;
-    private TransformableNode sixteenNode;
+    private TransformableNode twentyoneNode;
+    private TransformableNode twentytwoNode;
+    private TransformableNode twentythreeNode;
+    private TransformableNode twentyfourNode;
 
     private AnchorNode zeroAnchorNode;
     private AnchorNode firstAnchorNode;
@@ -56,15 +55,14 @@ public class ARManager {
     private AnchorNode fiveAnchorNode;
     private AnchorNode sixAnchorNode;
     private AnchorNode sevenAnchorNode;
-    private AnchorNode eightAnchorNode;
-    private AnchorNode nineAnchorNode;
-    private AnchorNode tenAnchorNode;
     private AnchorNode elevenAnchorNode;
     private AnchorNode twelveAnchorNode;
     private AnchorNode thirteenAnchorNode;
     private AnchorNode fourteenAnchorNode;
-    private AnchorNode fifteenAnchorNode;
-    private AnchorNode sixteenAnchorNode;
+    private AnchorNode twentyoneAnchorNode;
+    private AnchorNode twentytwoAnchorNode;
+    private AnchorNode twentythreeAnchorNode;
+    private AnchorNode twentyfourAnchorNode;
 
     private static final int zero_RENDERABLE = 0;
     private static final int one_RENDERABLE = 1;
@@ -74,21 +72,14 @@ public class ARManager {
     private static final int five_RENDERABLE = 5;
     private static final int six_RENDERABLE = 6;
     private static final int seven_RENDERABLE = 7;
-    private static final int eight_RENDERABLE = 8;
-    private static final int nine_RENDERABLE = 9;
-    private static final int ten_RENDERABLE = 10;
     private static final int eleven_RENDERABLE = 11;
     private static final int twelve_RENDERABLE = 12;
     private static final int thirteen_RENDERABLE = 13;
     private static final int fourteen_RENDERABLE = 14;
-    private static final int fifteen_RENDERABLE = 15;
-    private static final int sixteen_RENDERABLE = 16;
-    private static final int fone_RENDERABLE = 17;
-    private static final int ftwo_RENDERABLE = 18;
-    private static final int fthree_RENDERABLE = 19;
-    private static final int ffour_RENDERABLE = 20;
-    private static final int ffive_RENDERABLE = 21;
-    private static final int fsix_RENDERABLE = 22;
+    private static final int twentyone_RENDERABLE = 21;
+    private static final int twentytwo_RENDERABLE = 22;
+    private static final int twentythree_RENDERABLE = 23;
+    private static final int twentyfour_RENDERABLE = 24;
 
     private ModelRenderable zeroRenderable;
     private ModelRenderable oneRenderable;
@@ -98,21 +89,14 @@ public class ARManager {
     private ModelRenderable fiveRenderable;
     private ModelRenderable sixRenderable;
     private ModelRenderable sevenRenderable;
-    private ModelRenderable eightRenderable;
-    private ModelRenderable nineRenderable;
-    private ModelRenderable tenRenderable;
     private ModelRenderable elevenRenderable;
     private ModelRenderable twelveRenderable;
     private ModelRenderable thirteenRenderable;
     private ModelRenderable fourteenRenderable;
-    private ModelRenderable fifteenRenderable;
-    private ModelRenderable sixteenRenderable;
-    private ModelRenderable foneRenderable;
-    private ModelRenderable ftwoRenderable;
-    private ModelRenderable fthreeRenderable;
-    private ModelRenderable ffourRenderable;
-    private ModelRenderable ffiveRenderable;
-    private ModelRenderable fsixRenderable;
+    private ModelRenderable twentyoneRenderable;
+    private ModelRenderable twentytwoRenderable;
+    private ModelRenderable twentythreeRenderable;
+    private ModelRenderable twentyfourRenderable;
 
     public int currentSceneObject = 0;
     private int scenesCounter = 0;
@@ -134,8 +118,6 @@ public class ARManager {
                     // Create the Anchor.
                     Anchor anchor = hitResult.createAnchor();
 
-                    //EGYPT
-                    /*if (scenesCounter == 0) {*/
                     if (currentSceneObject == 0) {
                         if (zeroAnchorNode == null) {
                             _modelLoader.loadModel(zero_RENDERABLE, R.raw.allosaurus);
@@ -144,106 +126,111 @@ public class ARManager {
                     }
                     if (currentSceneObject == 1) {
                         if (firstAnchorNode == null) {
-                            _modelLoader.loadModel(one_RENDERABLE, R.raw.ceratosaurus);
+                            _modelLoader.loadModel(one_RENDERABLE, R.raw.carnotaurus);
                             firstAnchorNode = new AnchorNode(anchor);
                         }
                     }
                     if (currentSceneObject == 2) {
                         if (secondAnchorNode == null) {
-                            _modelLoader.loadModel(two_RENDERABLE, R.raw.cryolophosaurus);
+                            _modelLoader.loadModel(two_RENDERABLE, R.raw.diabloceratops);
                             secondAnchorNode = new AnchorNode(anchor);
                         }
                     }
                     if (currentSceneObject == 3) {
                         if (thirdAnchorNode == null) {
-                            _modelLoader.loadModel(three_RENDERABLE, R.raw.diabloceratops);
+                            _modelLoader.loadModel(three_RENDERABLE, R.raw.diplodocus);
 
                             thirdAnchorNode = new AnchorNode(anchor);
                         }
                     }
-                    currentSceneObject++;
-                    /*if (currentSceneObject == 4) {
+                    if (currentSceneObject == 4) {
                         if (fourAnchorNode == null) {
-                            _modelLoader.loadModel(four_RENDERABLE, R.raw.barque_of_mersou);
+                            _modelLoader.loadModel(four_RENDERABLE, R.raw.spinosaurus);
 
                             fourAnchorNode = new AnchorNode(anchor);
                         }
                     }
                     if (currentSceneObject == 5) {
                         if (fiveAnchorNode == null) {
-                            _modelLoader.loadModel(five_RENDERABLE, R.raw.boat_egyptian);
+                            _modelLoader.loadModel(five_RENDERABLE, R.raw.gorgosaurus);
+
                             fiveAnchorNode = new AnchorNode(anchor);
                         }
                     }
                     if (currentSceneObject == 6) {
                         if (sixAnchorNode == null) {
-                            _modelLoader.loadModel(six_RENDERABLE, R.raw.chest_of_tutankhamen);
+                            _modelLoader.loadModel(six_RENDERABLE, R.raw.ceratosaurus);
+
                             sixAnchorNode = new AnchorNode(anchor);
                         }
                     }
-
                     if (currentSceneObject == 7) {
                         if (sevenAnchorNode == null) {
-                            _modelLoader.loadModel(seven_RENDERABLE, R.raw.chest_of_tutankhamen_second);
+                            _modelLoader.loadModel(seven_RENDERABLE, R.raw.cryolophosaurus);
+
                             sevenAnchorNode = new AnchorNode(anchor);
                         }
                     }
 
-                    if (currentSceneObject == 8) {
-                        if (eightAnchorNode == null) {
-                            _modelLoader.loadModel(eight_RENDERABLE, R.raw.anthropoid_2);
-                            eightAnchorNode = new AnchorNode(anchor);
-                        }
-                    }
-
-                    if (currentSceneObject == 9) {
-                        if (nineAnchorNode == null) {
-                            _modelLoader.loadModel(nine_RENDERABLE, R.raw.akhenaten);
-                            nineAnchorNode = new AnchorNode(anchor);
-                        }
-                    }
-
-                    if (currentSceneObject == 10) {
-                        if (tenAnchorNode == null) {
-                            _modelLoader.loadModel(ten_RENDERABLE, R.raw.khonsutemple_chapel_12);
-                            tenAnchorNode = new AnchorNode(anchor);
-                        }
-                    }
-
+                    //Skeletons
                     if (currentSceneObject == 11) {
                         if (elevenAnchorNode == null) {
-                            _modelLoader.loadModel(eleven_RENDERABLE, R.raw.khonsutemple_chapel_6);
+                            _modelLoader.loadModel(eleven_RENDERABLE, R.raw.skeletontriceratopsskull);
+
                             elevenAnchorNode = new AnchorNode(anchor);
                         }
                     }
-
                     if (currentSceneObject == 12) {
                         if (twelveAnchorNode == null) {
-                            _modelLoader.loadModel(twelve_RENDERABLE, R.raw.dosiris);
+                            _modelLoader.loadModel(twelve_RENDERABLE, R.raw.skeletongomphothereskull);
+
                             twelveAnchorNode = new AnchorNode(anchor);
                         }
                     }
-
                     if (currentSceneObject == 13) {
                         if (thirteenAnchorNode == null) {
-                            _modelLoader.loadModel(thirteen_RENDERABLE, R.raw.papyrus_column);
+                            _modelLoader.loadModel(thirteen_RENDERABLE, R.raw.skeletonteratophoneus);
+
                             thirteenAnchorNode = new AnchorNode(anchor);
                         }
                     }
-
                     if (currentSceneObject == 14) {
                         if (fourteenAnchorNode == null) {
-                            _modelLoader.loadModel(fourteen_RENDERABLE, R.raw.funerary_mask);
-                            fourteenAnchorNode = new AnchorNode(anchor);
+                            _modelLoader.loadModel(four_RENDERABLE, R.raw.skeletonutahraptor);
+
+                            fourAnchorNode = new AnchorNode(anchor);
                         }
                     }
 
-                    if (currentSceneObject == 15) {
-                        if (fifteenAnchorNode == null) {
-                            _modelLoader.loadModel(fifteen_RENDERABLE, R.raw.mask_nefertiti);
-                            fifteenAnchorNode = new AnchorNode(anchor);
+                    //Fossils
+                    if (currentSceneObject == 21) {
+                        if (twentyoneAnchorNode == null) {
+                            _modelLoader.loadModel(twentyone_RENDERABLE, R.raw.skeletondiplodocus);
+
+                            twentyoneAnchorNode = new AnchorNode(anchor);
                         }
-                    }*/
+                    }
+                    if (currentSceneObject == 22) {
+                        if (twentytwoAnchorNode == null) {
+                            _modelLoader.loadModel(twentytwo_RENDERABLE, R.raw.fossilstegosaurus);
+
+                            twentytwoAnchorNode = new AnchorNode(anchor);
+                        }
+                    }
+                    if (currentSceneObject == 23) {
+                        if (twentythreeAnchorNode == null) {
+                            _modelLoader.loadModel(twentythree_RENDERABLE, R.raw.fossilcoelophysissecond);
+
+                            twentythreeAnchorNode = new AnchorNode(anchor);
+                        }
+                    }
+                    if (currentSceneObject == 24) {
+                        if (twentyfourAnchorNode == null) {
+                            _modelLoader.loadModel(twentyfour_RENDERABLE, R.raw.fossilcoelophysis);
+
+                            twentyfourAnchorNode = new AnchorNode(anchor);
+                        }
+                    }
                 });
     }
 
@@ -325,36 +312,6 @@ public class ARManager {
             sevenNode.select();
         }
 
-        if (id == eight_RENDERABLE) {
-            this.eightRenderable = renderable;
-
-            eightNode = new TransformableNode(_arFragment.getTransformationSystem());
-            eightNode.setRenderable(renderable);
-            eightNode.setParent(eightAnchorNode);
-            _arFragment.getArSceneView().getScene().addChild(eightAnchorNode);
-            eightNode.select();
-        }
-
-        if (id == nine_RENDERABLE) {
-            this.nineRenderable = renderable;
-
-            nineNode = new TransformableNode(_arFragment.getTransformationSystem());
-            nineNode.setRenderable(renderable);
-            nineNode.setParent(nineAnchorNode);
-            _arFragment.getArSceneView().getScene().addChild(nineAnchorNode);
-            nineNode.select();
-        }
-
-        if (id == ten_RENDERABLE) {
-            this.tenRenderable = renderable;
-
-            tenNode = new TransformableNode(_arFragment.getTransformationSystem());
-            tenNode.setRenderable(renderable);
-            tenNode.setParent(tenAnchorNode);
-            _arFragment.getArSceneView().getScene().addChild(tenAnchorNode);
-            tenNode.select();
-        }
-
         if (id == eleven_RENDERABLE) {
             this.elevenRenderable = renderable;
 
@@ -385,7 +342,6 @@ public class ARManager {
             thirteenNode.select();
         }
 
-
         if (id == fourteen_RENDERABLE) {
             this.fourteenRenderable = renderable;
 
@@ -396,25 +352,44 @@ public class ARManager {
             fourteenNode.select();
         }
 
+        if (id == twentyone_RENDERABLE) {
+            this.twentyoneRenderable = renderable;
 
-        if (id == fifteen_RENDERABLE) {
-            this.fifteenRenderable = renderable;
-
-            fifteenNode = new TransformableNode(_arFragment.getTransformationSystem());
-            fifteenNode.setRenderable(renderable);
-            fifteenNode.setParent(fifteenAnchorNode);
-            _arFragment.getArSceneView().getScene().addChild(fifteenAnchorNode);
-            fifteenNode.select();
+            twentyoneNode = new TransformableNode(_arFragment.getTransformationSystem());
+            twentyoneNode.setRenderable(renderable);
+            twentyoneNode.setParent(twentyoneAnchorNode);
+            _arFragment.getArSceneView().getScene().addChild(twentyoneAnchorNode);
+            twentyoneNode.select();
         }
 
-        if (id == sixteen_RENDERABLE) {
-            this.sixteenRenderable = renderable;
+        if (id == twentytwo_RENDERABLE) {
+            this.twentytwoRenderable = renderable;
 
-            sixteenNode = new TransformableNode(_arFragment.getTransformationSystem());
-            sixteenNode.setRenderable(renderable);
-            sixteenNode.setParent(sixteenAnchorNode);
-            _arFragment.getArSceneView().getScene().addChild(sixteenAnchorNode);
-            sixteenNode.select();
+            twentytwoNode = new TransformableNode(_arFragment.getTransformationSystem());
+            twentytwoNode.setRenderable(renderable);
+            twentytwoNode.setParent(twentytwoAnchorNode);
+            _arFragment.getArSceneView().getScene().addChild(twentytwoAnchorNode);
+            twentytwoNode.select();
+        }
+
+        if (id == twentythree_RENDERABLE) {
+            this.twentythreeRenderable = renderable;
+
+            twentythreeNode = new TransformableNode(_arFragment.getTransformationSystem());
+            twentythreeNode.setRenderable(renderable);
+            twentythreeNode.setParent(twentythreeAnchorNode);
+            _arFragment.getArSceneView().getScene().addChild(twentythreeAnchorNode);
+            twentythreeNode.select();
+        }
+
+        if (id == twentyfour_RENDERABLE) {
+            this.twentyfourRenderable = renderable;
+
+            twentyfourNode = new TransformableNode(_arFragment.getTransformationSystem());
+            twentyfourNode.setRenderable(renderable);
+            twentyfourNode.setParent(twentyfourAnchorNode);
+            _arFragment.getArSceneView().getScene().addChild(twentyfourAnchorNode);
+            twentyfourNode.select();
         }
 
         _ownerActivity.refreshControlsAfterObjectLoad();
@@ -509,36 +484,6 @@ public class ARManager {
             this.sevenRenderable = null;
         }
 
-        if (eightNode != null && eightAnchorNode != null) {
-            eightNode.setRenderable(null);
-            _arFragment.getArSceneView().getScene().removeChild(eightAnchorNode);
-            eightAnchorNode.getAnchor().detach();
-            eightNode.setParent(null);
-            eightNode = null;
-
-            eightAnchorNode = null;
-            this.eightRenderable = null;
-        }
-        if (nineNode != null && nineAnchorNode != null) {
-            nineNode.setRenderable(null);
-            _arFragment.getArSceneView().getScene().removeChild(nineAnchorNode);
-            nineAnchorNode.getAnchor().detach();
-            nineNode.setParent(null);
-            nineNode = null;
-
-            nineAnchorNode = null;
-            this.nineRenderable = null;
-        }
-        if (tenNode != null && tenAnchorNode != null) {
-            tenNode.setRenderable(null);
-            _arFragment.getArSceneView().getScene().removeChild(tenAnchorNode);
-            tenAnchorNode.getAnchor().detach();
-            tenNode.setParent(null);
-            tenNode = null;
-
-            tenAnchorNode = null;
-            this.tenRenderable = null;
-        }
         if (elevenNode != null && elevenAnchorNode != null) {
             elevenNode.setRenderable(null);
             _arFragment.getArSceneView().getScene().removeChild(elevenAnchorNode);
@@ -579,25 +524,45 @@ public class ARManager {
             fourteenAnchorNode = null;
             this.fourteenRenderable = null;
         }
-        if (fifteenNode != null && fifteenAnchorNode != null) {
-            fifteenNode.setRenderable(null);
-            _arFragment.getArSceneView().getScene().removeChild(fifteenAnchorNode);
-            fifteenAnchorNode.getAnchor().detach();
-            fifteenNode.setParent(null);
-            fifteenNode = null;
+        if (twentyoneNode != null && twentyoneAnchorNode != null) {
+            twentyoneNode.setRenderable(null);
+            _arFragment.getArSceneView().getScene().removeChild(twentyoneAnchorNode);
+            twentyoneAnchorNode.getAnchor().detach();
+            twentyoneNode.setParent(null);
+            twentyoneNode = null;
 
-            fifteenAnchorNode = null;
-            this.fifteenRenderable = null;
+            twentyoneAnchorNode = null;
+            this.twentyoneRenderable = null;
         }
-        if (sixteenNode != null && sixteenAnchorNode != null) {
-            sixteenNode.setRenderable(null);
-            _arFragment.getArSceneView().getScene().removeChild(sixteenAnchorNode);
-            sixteenAnchorNode.getAnchor().detach();
-            sixteenNode.setParent(null);
-            sixteenNode = null;
+        if (twentytwoNode != null && twentytwoAnchorNode != null) {
+            twentytwoNode.setRenderable(null);
+            _arFragment.getArSceneView().getScene().removeChild(twentytwoAnchorNode);
+            twentytwoAnchorNode.getAnchor().detach();
+            twentytwoNode.setParent(null);
+            twentytwoNode = null;
 
-            sixteenAnchorNode = null;
-            this.sixteenRenderable = null;
+            twentytwoAnchorNode = null;
+            this.twentytwoRenderable = null;
+        }
+        if (twentythreeNode != null && twentythreeAnchorNode != null) {
+            twentythreeNode.setRenderable(null);
+            _arFragment.getArSceneView().getScene().removeChild(twentythreeAnchorNode);
+            twentythreeAnchorNode.getAnchor().detach();
+            twentythreeNode.setParent(null);
+            twentythreeNode = null;
+
+            twentythreeAnchorNode = null;
+            this.twentythreeRenderable = null;
+        }
+        if (twentyfourNode != null && twentyfourAnchorNode != null) {
+            twentyfourNode.setRenderable(null);
+            _arFragment.getArSceneView().getScene().removeChild(twentyfourAnchorNode);
+            twentyfourAnchorNode.getAnchor().detach();
+            twentyfourNode.setParent(null);
+            twentyfourNode = null;
+
+            twentyfourAnchorNode = null;
+            this.twentyfourRenderable = null;
         }
 
 

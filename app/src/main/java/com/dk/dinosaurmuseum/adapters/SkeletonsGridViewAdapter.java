@@ -52,9 +52,9 @@ public class SkeletonsGridViewAdapter  extends BaseAdapter {
             textName.setText("Gomphothere Skull");
         }
         if (i == 2) {
-            image.setImageResource(R.drawable.s_diplodocus);
+            image.setImageResource(R.drawable.s_teratophoneus);
 
-            textName.setText("Diplodocus");
+            textName.setText("Teratophoneus Skull");
         }
         if (i == 3) {
             image.setImageResource(R.drawable.s_utahraptor);

@@ -132,8 +132,9 @@ public class MainActivity extends AppCompatActivity {
         skeletonsGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String url = (String) view.getTag();
-                //TODO: something
+                _arManager.currentSceneObject = i + 11;
+                fabMain.performClick();
+                fabMain.invalidate();
             }
         });
 
@@ -142,8 +143,9 @@ public class MainActivity extends AppCompatActivity {
         fossilsGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String url = (String) view.getTag();
-                //TODO: something
+                _arManager.currentSceneObject = i + 21;
+                fabMain.performClick();
+                fabMain.invalidate();
             }
         });
     }
