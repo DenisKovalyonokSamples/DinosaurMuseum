@@ -109,6 +109,7 @@ public class ARManager {
         initARFragment();
     }
 
+    //INFO: this hardcode will be replaced with database entities and data access layer (under development now).
     private void initARFragment()
     {
         _arFragment.setOnTapArPlaneListener(
